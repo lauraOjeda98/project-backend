@@ -6,7 +6,7 @@ import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 export class User {
     @PrimaryGeneratedColumn()
     @OneToMany(() => Candidate, id_users => id_users.id_candidate)
-    id_users: number;
+    id_users: Candidate[];
 
     @Column()
     email: string;
@@ -15,11 +15,11 @@ export class User {
     password: string;
 
     @Column()
-    create_at: string;
+    created_at: Date;
 
     @Column()
-    update_at: string;
+    update_at: Date;
 
     @Column()
-    deleted_at: string;
+    deleted_at: Date;
 }
