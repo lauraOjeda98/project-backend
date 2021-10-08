@@ -1,5 +1,5 @@
 import { Candidate } from "src/candidate/entities/candidate.entity";
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Column, CreateDateColumn, DeleteDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @Entity('users')
 
@@ -14,12 +14,12 @@ export class User {
     @Column()
     password: string;
 
-    @Column()
+    @CreateDateColumn()
     created_at: Date;
 
-    @Column()
+    @UpdateDateColumn()
     updated_at: Date;
 
-    @Column()
+    @DeleteDateColumn()
     deleted_at: Date;
 }

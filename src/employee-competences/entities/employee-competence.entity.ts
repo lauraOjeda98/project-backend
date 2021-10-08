@@ -1,6 +1,6 @@
 import { Competence } from "src/competences/entities/competence.entity";
 import { Employee } from "src/employees/entities/employee.entity";
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, CreateDateColumn, DeleteDateColumn, Entity, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @Entity('employee_competences')
 export class EmployeeCompetence {
@@ -13,12 +13,12 @@ export class EmployeeCompetence {
     @ManyToOne(() => Competence, competences_id => competences_id.id_compentences)
     competences_id: Competence;
 
-    @Column()
+    @CreateDateColumn()
     created_at: Date;
 
-    @Column()
-    update_at: Date;
+    @UpdateDateColumn()
+    updated_at: Date;
 
-    @Column()
+    @DeleteDateColumn()
     deleted_at: Date;
 }

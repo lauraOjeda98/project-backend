@@ -1,5 +1,5 @@
 import { EmployeeCompetence } from "src/employee-competences/entities/employee-competence.entity";
-import { Column, Entity, OneToMany, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
+import { Column, CreateDateColumn, DeleteDateColumn, Entity, OneToMany, PrimaryColumn, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @Entity('competences')
 export class Competence {
@@ -10,12 +10,12 @@ export class Competence {
     @Column()
     description: string;
 
-    @Column()
+    @CreateDateColumn()
     created_at: Date;
 
-    @Column()
-    update_at: Date;
+    @UpdateDateColumn()
+    updated_at: Date;
 
-    @Column()
+    @DeleteDateColumn()
     deleted_at: Date;
 }

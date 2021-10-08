@@ -2,7 +2,7 @@ import { Employee } from "src/employees/entities/employee.entity";
 import { Institution } from "src/institutions/entities/institution.entity";
 import { Profession } from "src/profession/entities/profession.entity";
 import { SchoolarityType } from "src/schoolarity-type/entities/schoolarity-type.entity";
-import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, CreateDateColumn, DeleteDateColumn, Entity, ManyToOne, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @Entity('employee_studies')
 export class EmployeeStudy {
@@ -27,12 +27,12 @@ export class EmployeeStudy {
     @Column()
     completed: string;
 
-    @Column()
+    @CreateDateColumn()
     created_at: Date;
 
-    @Column()
-    update_at: Date;
+    @UpdateDateColumn()
+    updated_at: Date;
 
-    @Column()
+    @DeleteDateColumn()
     deleted_at: Date;
 }

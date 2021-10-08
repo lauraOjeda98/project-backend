@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
+import { Column, CreateDateColumn, DeleteDateColumn, Entity, PrimaryColumn, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 @Entity('professions')
 export class Profession {
@@ -8,12 +8,12 @@ export class Profession {
     @Column()
     description: string;
 
-    @Column()
+    @CreateDateColumn()
     created_at: Date;
 
-    @Column()
-    update_at: Date;
+    @UpdateDateColumn()
+    updated_at: Date;
 
-    @Column()
+    @DeleteDateColumn()
     deleted_at: Date;
 }
