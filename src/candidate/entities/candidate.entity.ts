@@ -14,5 +14,5 @@ export class Candidate {
     name: string;
 
     @Column()
-    lastaname: string;
+    lastname: string;
 }

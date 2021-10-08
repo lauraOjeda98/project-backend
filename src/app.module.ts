@@ -11,6 +11,8 @@ import { EmployeeStudiesModule } from './employee-studies/employee-studies.modul
 import { SchoolarityTypeModule } from './schoolarity-type/schoolarity-type.module';
 import { InstitutionsModule } from './institutions/institutions.module';
 import { ProfessionModule } from './profession/profession.module';
+import { WorkRecordsModule } from './work-records/work-records.module';
+import { JobTitlesModule } from './job-titles/job-titles.module';
 
 @Module({
   imports: [
@@ -33,6 +35,8 @@ import { ProfessionModule } from './profession/profession.module';
     SchoolarityTypeModule,
     InstitutionsModule,
     ProfessionModule,
+    WorkRecordsModule,
+    JobTitlesModule,
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -3,7 +3,7 @@ import { Column, Entity, OneToMany, PrimaryColumn, PrimaryGeneratedColumn } from
 
 @Entity('competences')
 export class Competence {
-    @PrimaryColumn()
+    @PrimaryGeneratedColumn()
     @OneToMany(() => EmployeeCompetence, id_compentences => id_compentences.competences_id)
     id_compentences: number;
 
