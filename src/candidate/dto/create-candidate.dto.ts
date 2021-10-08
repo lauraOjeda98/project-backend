@@ -1,8 +1,9 @@
 import {IsNotEmpty} from "class-validator";
+import { User } from "src/users/entities/user.entity";
 
 export class CreateCandidateDto {
     @IsNotEmpty()
-    user_id: string;
+    user_id: User;
 
     @IsNotEmpty()
     name: string;
