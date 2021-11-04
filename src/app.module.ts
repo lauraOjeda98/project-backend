@@ -21,7 +21,7 @@ import { JobTitlesModule } from './job-titles/job-titles.module';
       host: 'localhost',
       port: 3306,
       username: 'root',
-      password: 'password',
+      password: '',
       database: 'project-backend',
       autoLoadEntities: true,
       synchronize: true,
