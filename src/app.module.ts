@@ -13,6 +13,7 @@ import { InstitutionsModule } from './institutions/institutions.module';
 import { ProfessionModule } from './profession/profession.module';
 import { WorkRecordsModule } from './work-records/work-records.module';
 import { JobTitlesModule } from './job-titles/job-titles.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -37,6 +38,7 @@ import { JobTitlesModule } from './job-titles/job-titles.module';
     ProfessionModule,
     WorkRecordsModule,
     JobTitlesModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
